@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/671bw4h9pfdu7lrs?svg=true)](https://ci.appveyor.com/project/druffy10/gradletask6)
