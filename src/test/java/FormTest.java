@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
@@ -9,10 +11,10 @@ public class FormTest {
     @Test
     public void testSuccessfulForm() {
         open("http://localhost:9999");
-        $("[data-test-id=city] input").setValue("Мо");
-        $(byText("Москва")).click();
+        $("[data-test-id=city] input").setValue("Москва");
+        $$(".menu").find(exactText("Москва")).click();
         $("[data-test-id=date]").click();
-        $(byText("5")).click();
+        $$(".calendar__day").find(exactText("5")).click();
         $("[data-test-id=name] input").setValue("Иван Иванов");
         $("[data-test-id=phone] input").setValue("+79123456789");
         $("[data-test-id=agreement]").click();
