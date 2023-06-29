@@ -13,8 +13,7 @@ public class FormTest {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
         $$(".menu").find(exactText("Москва")).click();
-        $("[data-test-id=date]").click();
-        $$(".calendar__day").find(exactText("5")).click();
+        $("[data-test-id=date] input").doubleClick().sendKeys("07.07.2023");
         $("[data-test-id=name] input").setValue("Иван Иванов");
         $("[data-test-id=phone] input").setValue("+79123456789");
         $("[data-test-id=agreement]").click();
